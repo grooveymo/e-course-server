@@ -11,6 +11,9 @@ Provides an api layer for the e-course ui
 
 3. Open a terminal and inspect the database:   
    -    $ npx prisma studio
+  This will open a tab in your browser (http://localhost:5555/)
+  showing the prisma studio client which allows you to inspect
+  the data in your database.
 
 4. Check api routes are working as expected using curl
    

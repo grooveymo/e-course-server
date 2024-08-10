@@ -2,7 +2,10 @@
   "scripts": {
     "start": "node dist/app.js",
     "dev": "nodemon src/app.ts",
-    "build": "tsc && npx prisma generate"
+    "build": "tsc && npx prisma generate",
+    "seed": "ts-node prisma/seed.ts",
+	"db:reset": "npx prisma migrate reset",
+    "db:seed": "npm run db:reset && ts-node prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.18.0",

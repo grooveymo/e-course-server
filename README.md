@@ -29,3 +29,11 @@ Provides an api layer for the e-course ui
     # Delete a course (replace [id] with an actual id)
     curl -X DELETE http://localhost:3000/courses/[id]
 
+5. Seed the database with test data:
+    - $ pnpm run seed
+
+6. Run this script to delete all data in the db:
+    - $ pnpm run db:reset
+  
+7. Run this script to delete all data in the db and reset with values in the seed.ts file :
+    - $ pnpm run db:seed

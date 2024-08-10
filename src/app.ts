@@ -1,4 +1,6 @@
 import express, { Request, Response } from 'express';
+import cors from 'cors';
+
 import { CourseInput, CourseUpdateInput } from './types';
 import prisma from './db';
 
@@ -6,6 +8,15 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
+
+// Enable CORS for all routes
+app.use(
+  cors({
+    origin: 'http://localhost:5173', // Allow only our UI's origin
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+  })
+);
 
 // GET /courses (returns all courses)
 app.get('/courses', async (req: Request, res: Response) => {

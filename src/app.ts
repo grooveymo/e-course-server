@@ -49,7 +49,7 @@ app.post('/courses', async (req: Request, res: Response) => {
   try {
     const courseData: CourseInput = req.body;
     const newCourse = await prisma.course.create({
-      data: courseData,
+      data: { ...courseData, totalModulesCompleted: 0 },
     });
     res.status(201).json(newCourse);
   } catch (error) {

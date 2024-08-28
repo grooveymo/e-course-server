@@ -50,9 +50,15 @@ Provides an api layer for the e-course ui
 
 ![alt text](image.png)
 
-6. Run this script to delete all data in the db:
+6. To view the state of your database, execute the following command 
+   - $ pnpm db:view
+
+   This should open up a new tab in your browser with the url: localhost:5555
+
+7. Run this script to delete all data in the db:
 
    - $ pnpm run db:reset
 
-7. Run this script to delete all data in the db and reset with values in the seed.ts file :
+8. Run this script to delete all data in the db and reset with values in the seed.ts file :
    - $ pnpm run db:seed
+

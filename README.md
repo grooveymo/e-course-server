@@ -62,3 +62,8 @@ Provides an api layer for the e-course ui
 8. Run this script to delete all data in the db and reset with values in the seed.ts file :
    - $ pnpm run db:seed
 
+N.B. In case you have problems deploying:
+
+Run the following command:
+ 
+   $ npx prisma generate
